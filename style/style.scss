@@ -11,27 +11,34 @@ $base-grey: #707070 !default;
     src: url(fonts/Mont-HeavyDEMO.otf);
     font-weight: bold;
 }
+@font-face {
+    font-family: edensor;
+    src: url(fonts/Edensor-Free.otf);
+}
 body{
     background-color: rgba(0, 0, 0, 0.096);
     margin: auto;
+    margin-top: 20px;
     padding: 0;
     font-family: mont;
 }
 // Vertical
 .vertical{
-    margin-left: 10px;
+    margin: auto;
+    width: 10%;
     color: $base-grey;
     position: fixed;
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-items: center;
     text-align: center;
 }
 .vertical img {
     position: absolute;
-    width: 40px;
-    bottom: 25px;
-    left: 10px;
+    width: 25%;
+    bottom: 40px;
+    left: 40%;
 }
 .vertical h1{
     font-weight: bold;
@@ -48,8 +55,9 @@ body{
 
 //Header
 header, main, footer{
-    width: 90%;
-    margin-left: 82px;
+    width: 80%;
+    margin: auto;
+    
 }
 
 header nav {
@@ -62,17 +70,23 @@ header nav {
     ul{
         display: flex;
         align-items: center;
+        width: 50%;
+        justify-content: space-between;
     }
     li{
         float: right;
         font-size: 2em;
+        text-align: center;
         list-style-type: none;
         display: inline-block;
-        margin-left: 30px;
+        width: 33%;
         a{
             color: $base-grey;
             text-decoration: none;
         }
+    }
+    li:hover{
+        font-weight: bold;
     }
 }
 
@@ -80,6 +94,13 @@ header nav {
 // Carousel
 
 .cont-carousel{
+
+    h2{
+        margin-top: 50px;
+        text-align: center;
+        font-weight: 100;
+    }
+
     *, ::before, ::after{
         margin: 0;
         padding: 0;
@@ -88,7 +109,7 @@ header nav {
     .container{
         overflow: hidden;
         max-width: 800px;
-        margin: 50px auto;
+        margin: 8px auto;
         padding: 0px;
         position: relative;
         .cont-btn{
@@ -157,4 +178,53 @@ header nav {
     }
     
 
+}
+
+// Scroll down
+.scroll-down{
+    margin-top: 4%;
+    text-align: center;
+    img{
+        width: 2%;
+        transform: rotate(270deg);
+        animation: zizo 3s infinite;
+    }
+    @keyframes zizo {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.2);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+}
+//Histoire
+
+.histoire{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    .h-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        border-radius: 64px;
+        width: 60%;
+    }
+    img+img{
+        margin-top: 20px;
+    }
+    p{
+        display: flex;
+        font-family: edensor;
+        font-size: 2em;
+        width: 50%;
+        align-items: center;
+        text-align: justify;
+    }
 }
